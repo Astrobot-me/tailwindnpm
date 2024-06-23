@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body class="bg-slate-900 h-screen grid sm:grid-row-3 overflow-x-hidden">
+
+    <header class="bg-slate-50 w-screen  z-10 h-auto">
+
+        <nav class="flex justify-between items-center w-[95%] mx-auto " >
+
+            <div class="border">
+                <img class="w-12 cursor-pointer " src="https://img.icons8.com/3d-fluency/94/person-male--v5.png" alt="logo"/>
+            </div>
+
+            <div class="absolute flex nav-links top-[-100%] left-0 p-1 bg-white sm:static w-screen sm:w-auto justify-center duration-[750ms] ">
+
+                <ul class="p-3 flex flex-col sm:flex-row gap-10 items-center sm:justify-center font-bold">
+
+                    <li class="hover:scale-125 duration-300 ">
+                        <a class=" hover:text-gray-700 " href="http://">Home</a>
+                    </li>
+                    <li class="hover:scale-125 duration-300">
+                        <a class=" hover:text-gray-700 " href="http://">Projects</a>
+                    </li>
+                    <li class="hover:scale-125 duration-300">
+                        <a class=" hover:text-gray-700 " href="http://">Resources</a>
+                    </li>
+                    <li class="hover:scale-125 duration-300">
+                        <a class=" hover:text-gray-700 " href="http://">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <div class="flex flex-row justify-center items-center gap-2 ">
+                <button  class="px-6 py-1.5 bg-sky-500 text-white rounded-full hover:bg-sky-700  hover:duration-300 hover:scale-110  hover:ease-in-out" type="button">Resume</button>
+                <img onclick='OnToggle(this)' class="w-6 cursor-pointer sm:hidden hover:duration-300 hover:scale-110 hover:ease-in-out " src="https://img.icons8.com/ios-filled/50/menu--v6.png" alt="menu--v6"/>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="border-solid border-cyan-50">
+
+            <div class="h-screen grid sm:grid-cols-12 gap-4 m-2">
+            
+                <div class="hidden h-screen min-h-[200px] rounded-lg shadow opacity-30 sm:col-span-2 sm:block"></div>
+
+                <div class="h-screen  rounded-lg bg-slate-400 shadow   col-span-8 p-5 flex flex-wrap justify-center overflow-scroll overflow-x-hidden gap-3 ">
+                    <!-- <p class="text-center text-2xl text-gray-900">Cards</p> -->
+                    <div class="card flex sm:flex-row flex-col  h-[350px] sm:h-[200px] min-w-10 w-[400px] bg-slate-50 p-2 rounded-xl shadow-xl hover:scale-105 hover:duration-500 hover:ease-in-out " >
+
+                        <img class="sm:w-40 sm:h-full w-full h-[160px] rounded-md" src="../assets/flower.jpg" alt="card_image" srcset="">
+
+                        <div class="flex flex-col  content p-2 ">
+                            
+                            <p class="font-bold text-black text-xl mt-2 ">Lorem, ipsum dolor.</p>
+                               
+                            <p class="font-serif ml-1 mt-3 text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. !</p>
+                            
+                            <div class="flex justify-between mt-3">
+                                <p class="text-gray-700 text-xl ml-1"><span class="text-lg">By</span> John Harris</p>
+
+                                <div class="flex gap-2 mt-4 ">
+                                    <img class="w-10  bg-green-600 p-1 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/pencil.png" alt="pencil--v1" alt="" srcset="">
+
+                                    <img class="w-10  bg-red-600 p-2 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/bin.png" alt="pencil--v1" alt="" srcset="">
+                                    
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex sm:flex-row flex-col  h-[350px] sm:h-[200px] min-w-10 w-[400px] bg-slate-50 p-2 rounded-xl shadow-xl hover:scale-105 hover:duration-500 hover:ease-in-out " >
+
+                        <img class="sm:w-40 sm:h-full w-full h-[160px] rounded-md" src="../assets/flower.jpg" alt="card_image" srcset="">
+
+                        <div class="flex flex-col  content p-2 ">
+                            
+                            <p class="font-bold text-black text-xl mt-2 ">Lorem, ipsum dolor.</p>
+                               
+                            <p class="font-serif ml-1 mt-3 text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. !</p>
+                            
+                            <div class="flex justify-between mt-3">
+                                <p class="text-gray-700 text-xl ml-1"><span class="text-lg">By</span> John Harris</p>
+
+                                <div class="flex gap-2 mt-4 ">
+                                    <img class="w-10  bg-green-600 p-1 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/pencil.png" alt="pencil--v1" alt="" srcset="">
+
+                                    <img class="w-10  bg-red-600 p-2 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/bin.png" alt="pencil--v1" alt="" srcset="">
+                                    
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex sm:flex-row flex-col  h-[350px] sm:h-[200px] min-w-10 w-[400px] bg-slate-50 p-2 rounded-xl shadow-xl hover:scale-105 hover:duration-500 hover:ease-in-out " >
+
+                        <img class="sm:w-40 sm:h-full w-full h-[160px] rounded-md" src="../assets/flower.jpg" alt="card_image" srcset="">
+
+                        <div class="flex flex-col  content p-2 ">
+                            
+                            <p class="font-bold text-black text-xl mt-2 ">Lorem, ipsum dolor.</p>
+                               
+                            <p class="font-serif ml-1 mt-3 text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. !</p>
+                            
+                            <div class="flex justify-between mt-3">
+                                <p class="text-gray-700 text-xl ml-1"><span class="text-lg">By</span> John Harris</p>
+
+                                <div class="flex gap-2 mt-4 ">
+                                    <img class="w-10  bg-green-600 p-1 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/pencil.png" alt="pencil--v1" alt="" srcset="">
+
+                                    <img class="w-10  bg-red-600 p-2 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/bin.png" alt="pencil--v1" alt="" srcset="">
+                                    
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex sm:flex-row flex-col  h-[350px] sm:h-[200px] min-w-10 w-[400px] bg-slate-50 p-2 rounded-xl shadow-xl hover:scale-105 hover:duration-500 hover:ease-in-out " >
+
+                        <img class="sm:w-40 sm:h-full w-full h-[160px] rounded-md" src="../assets/flower.jpg" alt="card_image" srcset="">
+
+                        <div class="flex flex-col  content p-2 ">
+                            
+                            <p class="font-bold text-black text-xl mt-2 ">Lorem, ipsum dolor.</p>
+                               
+                            <p class="font-serif ml-1 mt-3 text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. !</p>
+                            
+                            <div class="flex justify-between mt-3">
+                                <p class="text-gray-700 text-xl ml-1"><span class="text-lg">By</span> John Harris</p>
+
+                                <div class="flex gap-2 mt-4 ">
+                                    <img class="w-10  bg-green-600 p-1 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/pencil.png" alt="pencil--v1" alt="" srcset="">
+
+                                    <img class="w-10  bg-red-600 p-2 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/bin.png" alt="pencil--v1" alt="" srcset="">
+                                    
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex sm:flex-row flex-col  h-[350px] sm:h-[200px] min-w-10 w-[400px] bg-slate-50 p-2 rounded-xl shadow-xl hover:scale-105 hover:duration-500 hover:ease-in-out " >
+
+                        <img class="sm:w-40 sm:h-full w-full h-[160px] rounded-md" src="../assets/flower.jpg" alt="card_image" srcset="">
+
+                        <div class="flex flex-col  content p-2 ">
+                            
+                            <p class="font-bold text-black text-xl mt-2 ">Lorem, ipsum dolor.</p>
+                               
+                            <p class="font-serif ml-1 mt-3 text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. !</p>
+                            
+                            <div class="flex justify-between mt-3">
+                                <p class="text-gray-700 text-xl ml-1"><span class="text-lg">By</span> John Harris</p>
+
+                                <div class="flex gap-2 mt-4 ">
+                                    <img class="w-10  bg-green-600 p-1 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/pencil.png" alt="pencil--v1" alt="" srcset="">
+
+                                    <img class="w-10  bg-red-600 p-2 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/bin.png" alt="pencil--v1" alt="" srcset="">
+                                    
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex sm:flex-row flex-col  h-[350px] sm:h-[200px] min-w-10 w-[400px] bg-slate-50 p-2 rounded-xl shadow-xl hover:scale-105 hover:duration-500 hover:ease-in-out " >
+
+                        <img class="sm:w-40 sm:h-full w-full h-[160px] rounded-md" src="../assets/flower.jpg" alt="card_image" srcset="">
+
+                        <div class="flex flex-col  content p-2 ">
+                            
+                            <p class="font-bold text-black text-xl mt-2 ">Lorem, ipsum dolor.</p>
+                               
+                            <p class="font-serif ml-1 mt-3 text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. !</p>
+                            
+                            <div class="flex justify-between mt-3">
+                                <p class="text-gray-700 text-xl ml-1"><span class="text-lg">By</span> John Harris</p>
+
+                                <div class="flex gap-2 mt-4 ">
+                                    <img class="w-10  bg-green-600 p-1 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/pencil.png" alt="pencil--v1" alt="" srcset="">
+
+                                    <img class="w-10  bg-red-600 p-2 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/bin.png" alt="pencil--v1" alt="" srcset="">
+                                    
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex sm:flex-row flex-col  h-[350px] sm:h-[200px] min-w-10 w-[400px] bg-slate-50 p-2 rounded-xl shadow-xl hover:scale-105 hover:duration-500 hover:ease-in-out " >
+
+                        <img class="sm:w-40 sm:h-full w-full h-[160px] rounded-md" src="../assets/flower.jpg" alt="card_image" srcset="">
+
+                        <div class="flex flex-col  content p-2 ">
+                            
+                            <p class="font-bold text-black text-xl mt-2 ">Lorem, ipsum dolor.</p>
+                               
+                            <p class="font-serif ml-1 mt-3 text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. !</p>
+                            
+                            <div class="flex justify-between mt-3">
+                                <p class="text-gray-700 text-xl ml-1"><span class="text-lg">By</span> John Harris</p>
+
+                                <div class="flex gap-2 mt-4 ">
+                                    <img class="w-10  bg-green-600 p-1 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/pencil.png" alt="pencil--v1" alt="" srcset="">
+
+                                    <img class="w-10  bg-red-600 p-2 shadow-xl rounded-full hover:scale-125 hover:duration-300" src="../assets/bin.png" alt="pencil--v1" alt="" srcset="">
+                                    
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="hidden h-screen min-h-[200px] rounded-lg  opacity-30 shadow sm:col-span-2 sm:block"></div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        const menu = 'https://img.icons8.com/ios-filled/50/menu--v6.png'
+        const cross = 'https://img.icons8.com/material-sharp/96/multiply.png'
+        const navLinks = document.querySelector('.nav-links')
+
+        
+        const OnToggle = (e)=>{
+            console.log(e.src)
+            e.src = e.src === menu ? cross : menu
+            if (navLinks.classList.contains('top-[-100%]')) {
+                navLinks.classList.remove('top-[-100%]');
+                navLinks.classList.add('top-[9%]');
+            } else {
+                navLinks.classList.remove('top-[9%]');
+                navLinks.classList.add('top-[-100%]');
+            }
+        }
+    </script>
+</body>
+</html>

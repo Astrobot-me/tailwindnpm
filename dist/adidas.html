@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas - Homepage</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="shortcut icon" href="../nike-assets/icons/adidasico.svg" type="image/x-icon">
+</head>
+<body class="relative w-full h-full bg-white">
+    <nav class="w-[90%] h-18 flex items-center justify-between mt-3 mx-auto text-gray-950">
+        <div>
+            <img class="w-[85px] cursor-pointer" src="../nike-assets/icons/addidas.svg" alt="">
+        </div>
+        <div class="side-menu absolute flex left-[-100%] top-0 h-full w-[50%] sm:w-auto sm:static bg-white-400 shadow duration-[750ms]">
+
+            <ul class="flex flex-col sm:mt-0 mt-5 sm:flex-row items-start sm:gap-10 gap-14 text-xl sm:text-lg sm:font-normal font-bold sm:normal-case uppercase font-montserrat text-gray-950 cursor-pointer sm:mx-0 mx-5 ">
+
+                <li class=" hover:text-slate-600 sm:hover:text-gray-950">Home</li>
+                <li class=" hover:text-slate-600 sm:hover:text-gray-950">About Us</li>
+                <li class=" hover:text-slate-600 sm:hover:text-gray-950">Products</li>
+                <li class=" hover:text-slate-600 sm:hover:text-gray-950">Contacts Us</li>
+            </ul>
+        </div>
+        <div class="flex gap-2">
+            <button class="hidden sm:block font-medium text-lg">Sign in/ Sign Up</button>
+            <img class="block sm:hidden w-6 cursor-pointer hover:duration-300 hover:scale-110 hover:ease-in-out" src="https://img.icons8.com/ios-filled/50/menu--v6.png" alt="" onclick="toggleNav(this)">
+        </div>
+    </nav>
+
+    <!-- Hero Section starts Here  -->
+    <section class="w-full h-auto flex flex-col px-14 ">
+        <p class="mt-7 font-montserrat text-xl text-gray-950">Our Latest Summer Collection</p>
+
+        <div class="flex w-full h-full mt-8 sm:flex-row flex-col">
+            <div class="flex flex-col w-[60%]">
+                <div class="text-[80px] w-full font-bold font-montserrat text-slate-950">The New Arrival <span class="text-slate-600">Adidas</span> Shoes</div>
+                <p class="text-slate-500 w-[80%] p-1 text-md ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur excepturi numquam debitis magni, expedita provident et odio laboriosam consequuntur quos.</p>
+                
+                <div class="mt-20 flex flex-row items-center justify-center  gap-1 w-[30%] h-12 rounded-full bg-slate-900 text-white cursor-pointer"> 
+                    <p class="font-normal font-montserrat">Shop Now</p>
+                    <img class="w-8 rounded-none" src="../nike-assets/icons/arrow-up.svg" alt="">
+                </div>
+
+                <div class="flex mt-10 sm:px-5  sm:gap-10 sm:gap-x-16 gap-5 gap-x-5">
+                    
+                    <div class="flex flex-col">
+                        <p class="text-[50px] font-bold font-palanquin">1k+</p>
+                        <p class="text-xl mb-8 font-palanquin text-gray-600" style="line-height:20px;">Brands</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[50px] font-bold font-palanquin">500+</p>
+                        <p class="text-xl mb-8 font-palanquin text-gray-600" style="line-height:20px;">Shops</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[50px] font-bold font-palanquin">250k+</p>
+                        <p class="text-xl mb-8 font-palanquin text-gray-600" style="line-height:20px;">Customers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col h-auto sm:w-[40%] w-full justify-start" >
+
+                <img class="w-[120%] hero-image duration-700 ease-in-out" src="../nike-assets/images/big-shoe1.png" alt="" srcset="" id="heroimg">
+
+                <div class="flex mt-16 mb-10 gap-2 ">
+
+                    <div class="border-[1px] w-auto border-slate-600 p-2 py-4 rounded-lg h-auto bg-cover bg-no-repeat hero-card cursor-pointer" style="background-image: url('../nike-assets/images/thumbnail-background.svg');" onclick="Toggle(event)">
+
+                        <img class=" w-[150px] imageclass " src="../nike-assets/images/big-shoe1.png" alt="img">
+
+                    </div>
+                    <div class=" w-auto border-slate-600 p-2 py-4 rounded-lg h-auto bg-cover bg-no-repeat hero-card cursor-pointer" style="background-image: url('../nike-assets/images/thumbnail-background.svg');" onclick="Toggle(event)">
+
+                        <img class=" w-[150px] imageclass " src="../nike-assets/images/big-shoe2.png" alt="img">
+
+                    </div>
+                    <div class=" w-auto border-slate-600 p-2 py-4 rounded-lg h-auto bg-cover bg-no-repeat hero-card cursor-pointer" style="background-image : url('../nike-assets/images/thumbnail-background.svg');" onclick="Toggle(event)">
+
+                        <img class=" w-[150px] imageclass" src="../nike-assets/images/big-shoe3.png" alt="img">
+
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <script defer>
+        const Toggle = (e)=>{
+            let heroimg = document.getElementById("heroimg");
+            let parentDiv = e.currentTarget;
+            // console.log(parentDiv)
+            // let imageTag = document.getElementsByClassName('imageclass');
+            let imageTag = parentDiv.querySelector('.imageclass')
+            let images = document.querySelectorAll('.hero-card');
+            
+
+            heroimg.src = imageTag.src
+
+            images.forEach(img => {img.classList.remove('border-[1px]')});
+            parentDiv.classList.add('border-[1px]');
+        }
+
+        const toggleNav = (e) =>{
+            const menu = 'https://img.icons8.com/ios-filled/50/menu--v6.png'
+            const cross = 'https://img.icons8.com/material-sharp/96/multiply.png'
+            const navLinks = document.querySelector('.side-menu')
+            console.log(e.src)
+            e.src = e.src === menu ? cross : menu
+            if (navLinks.classList.contains('left-[-100%]')) {
+                navLinks.classList.remove('left-[-100%]');
+                navLinks.classList.add('left-[0%]');
+            } else {
+                navLinks.classList.remove('left-[0%]');
+                navLinks.classList.add('left-[-100%]');
+            }
+        }
+    </script>
+    <!-- Hero Section ends Here  -->
+
+
+    <!-- hero product section starts here  -->
+    <section class="w-full h-auto flex flex-col px-14 mt-20">
+        <div class="flex flex-col w-[45%]">
+            <p class="text-[40px] font-bold font-palanquin">Our <span class="text-slate-600">Popular</span> Products</p>
+            <p class="mt-2 text-lg text-slate-500 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam veniam corporis laborum Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="flex flex-wrap justify-evenly w-full h-auto mt-10 mb-8 cursor-pointer">
+            <!-- cards  -->
+            <div class="w-auto flex flex-col gap-1">
+                <div class="bg-cover bg-no-repeat" style="background-image: url('../nike-assets/images/thumbnail-background.svg');">
+                    <img src="../nike-assets/images/shoe4.svg" alt="">
+                </div>
+                <div class="flex gap-2 mt-8 px-1">
+                    <img class="w-6" src="../nike-assets/icons/star-filled.svg" alt="">
+                    <p class="text-xl font-montserrat text-gray-600">(4.4)</p>
+                </div>
+                <p class="px-1 mt-1 text-[20px] font-semibold font-montserrat">Adidas Air Jordan-01</p>
+                <p class="px-1 text-[24px] text-slate-600 font-semibold font-montserrat">$200.20</p>
+            </div>
+            <div class="w-auto flex flex-col gap-1">
+                <div class="bg-cover bg-no-repeat" style="background-image: url('../nike-assets/images/thumbnail-background.svg');">
+                    <img src="../nike-assets/images/shoe5.svg" alt="">
+                </div>
+                <div class="flex gap-2 mt-8 px-1">
+                    <img class="w-6" src="../nike-assets/icons/star-filled.svg" alt="">
+                    <p class="text-xl font-montserrat text-gray-600">(4.8)</p>
+                </div>
+                <p class="px-1 mt-1 text-[20px] font-semibold font-montserrat">Adidas Air Jordan-10</p>
+                <p class="px-1 text-[24px] text-slate-600 font-semibold font-montserrat">$210.10</p>
+            </div>
+            <div class="w-auto flex flex-col gap-1">
+                <div class="bg-cover bg-no-repeat" style="background-image: url('../nike-assets/images/thumbnail-background.svg');">
+                    <img src="../nike-assets/images/shoe6.svg" alt="">
+                </div>
+                <div class="flex gap-2 mt-8 px-1">
+                    <img class="w-6" src="../nike-assets/icons/star-filled.svg" alt="">
+                    <p class="text-xl font-montserrat text-gray-600">(4.4)</p>
+                </div>
+                <p class="px-1 mt-1 text-[20px] font-semibold font-montserrat">Adidas Air Classic</p>
+                <p class="px-1 text-[24px] text-slate-600 font-semibold font-montserrat">$190.19</p>
+            </div>
+            <div class="w-auto flex flex-col gap-1">
+                <div class="w-full h-auto bg-cover bg-no-repeat" style="background-image: url('../nike-assets/images/thumbnail-background.svg');">
+                    <img src="../nike-assets/images/shoe7.svg" alt="">
+                </div>
+                <div class="flex gap-2 mt-8 px-1">
+                    <img class="w-6" src="../nike-assets/icons/star-filled.svg" alt="">
+                    <p class="text-xl font-montserrat text-gray-600">(4.2)</p>
+                </div>
+                <p class="px-1 mt-1 text-[20px] font-semibold font-montserrat">Adidas Sneaker Head</p>
+                <p class="px-1 text-[24px] text-slate-600 font-semibold font-montserrat">$246.99</p>
+            </div>
+        </div>
+    </section>
+    <!-- hero product section ends  -->
+    
+    <!-- highlight product section starts  -->
+    <section class="w-full h-auto flex px-14 mt-20 mb-10 ">
+        <div class="w-[50%] h-auto mt-5">
+            <p class="text-[50px] font-bold font-palanquin">We Provide You <span class="text-slate-600">Super  Quality</span> Shoes</p>
+            <p class="w-[90%] mt-5 text-gray-500 font-montserrat text-md p-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad officia eveniet sunt porro voluptate deleniti alias ex consectetur minima. Repudiandae sequi at sed fugiat quo.</p>
+            <p class="mt-5 text-gray-500 font-montserrat text-md p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, est.</p>
+            <div class="mt-20 flex flex-row items-center justify-center  gap-4 w-[35%] h-14 rounded-full bg-slate-900 text-white cursor-pointer"> 
+                <p class="font-normal font-montserrat text-xl">Shop Now</p>
+            </div>
+        </div>
+        
+        <img class="w-[50%] h-auto" src="../nike-assets/images/shoe8.svg" alt="">
+        
+    </section>
+    <!-- highlight product section ends here  -->
+
+    <!-- feature section starts here  -->
+    <section class="w-full h-auto flex flex-wrap px-14 mt-20 mb-16 gap-10 justify-center">
+        <div class="flex flex-col justify-start w-[30%] m-1 ">
+            <img class="w-10" src="../nike-assets/icons/truck.svg" alt="">
+            <p class="text-3xl font-bold font-palanquin mt-3">Fast Delivery</p>
+            <p class="w-[90%] text-[18px] text-slate-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque laudantium rerum officiis .</p>
+        </div>
+        <div class="flex flex-col justify-start w-[30%] m-1 ">
+            <img class="w-10" src="../nike-assets/icons/secure.svg" alt="">
+            <p class="text-3xl font-bold font-palanquin mt-3">Secure Payments</p>
+            <p class="w-[90%] text-[18px] text-slate-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque laudantium rerum officiis .</p>
+        </div>
+        <div class="flex flex-col justify-start w-[30%] m-1 ">
+            <img class="w-10" src="../nike-assets/icons/customer-service.svg" alt="">
+            <p class="text-3xl font-bold font-palanquin mt-3">Customer Support</p>
+            <p class="w-[90%] text-[18px] text-slate-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque laudantium rerum officiis .</p>
+        </div>
+    </section>
+    <!-- feature section ends here  -->
+    
+    <!-- Special offer section starts Here  -->
+    <section class="w-full h-auto flex px-14 mt-20 mb-16">
+        <img class="w-[50%] h-auto" src="../nike-assets/images/offer.svg" alt="">
+        <div class="mt-20 flex flex-col w-[50%] ml-3">
+            <p class="text-[50px] font-bold font-palanquin"><span class="text-slate-600">Special</span> offer</p>
+            <p class="w-[90%] text-slate-500 text-xl mt-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem blanditiis fugiat error quo, nisi facere? Atque fugiat consequuntur voluptate cum. </p>
+            <p class="w-[85%] text-slate-500 text-xl mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem blanditiis fugiat error quo, nisi facere? </p>
+            <div class="flex gap-2">
+
+                <div class="mt-20 flex flex-row items-center justify-center gap-1 w-[30%] h-12 rounded-full bg-slate-900 text-white cursor-pointer"> 
+                    <p class="font-normal font-montserrat text-lg">Shop Now</p>
+                    <img class="w-8" src="../nike-assets/icons/arrow-up.svg" alt="">
+                </div>
+                <div class="mt-20 flex flex-row items-center justify-center  gap-4 w-[30%] h-12 rounded-full border border-slate-900 text-slate-900 cursor-pointer"> 
+                    <p class="font-normal font-montserrat text-lg">Learn more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Special offer section ends Here  -->
+    
+    <!-- Cutomer Review section Starts Here  -->
+    <section class="w-full h-auto flex flex-col px-14 mt-20 mb-16">
+        <div class="flex flex-col w-full justify-center items-center">
+            <p class="text-[50px] font-palanquin font-bold">What Our <span class="text-slate-600">Customers</span> Say?</p>
+            <p class="mx-2 w-[40%] text-center text-xl mt-2 text-gray-600">Hear genuine stories from our satisfied customers about their exceptional experiences with us.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-around mt-10 w-full ">
+                <!-- card  -->
+                <div class="flex flex-col mt-10 items-center w-[50%]">
+                    <img class="w-32 rounded-full" src="../nike-assets/images/customer1.jpeg" alt="">
+
+                    <p class=" w-[70%] text-center text-xl mt-6 text-gray-600">The attention to detail and the quality of the product exceeded my expectations. Highly recommended!</p>
+
+                    <div class="flex mt-3 gap-1">
+                        <img class="w-6" src="../nike-assets/icons/star-filled.svg" alt="">
+                        <p class="text-xl font-montserrat text-gray-600">(4.7)</p>
+                    </div>
+                    <p class="px-1 mt-3 text-[25px] font-semibold font-montserrat">Jhony Harris</p>
+                </div>
+
+                <div class="flex flex-col mt-10 items-center w-[50%]">
+                    <img class="w-32 rounded-full" src="../nike-assets/images/customer2.svg" alt="">
+
+                    <p class="w-[70%] text-center text-xl mt-6 text-gray-600">The product not only met but exceeded my expectations. I'll definitely be a returning customer!</p>
+                    
+                    <div class="flex mt-3 gap-1">
+                        <img class="w-6" src="../nike-assets/icons/star-filled.svg" alt="">
+                        <p class="text-xl font-montserrat text-gray-600">(4.5)</p>
+                    </div>
+                    <p class="px-1 mt-3 text-[25px] font-semibold font-montserrat">Timothy Stone</p>
+                </div>
+        </div>
+    </section>
+    <!-- Cutomer Review section ends Here  -->
+    
+    
+    <!-- Newsletter section Starts Here  -->
+    <section class="w-full h-auto flex sm:flex-row flex-col px-14 mt-28 mb-28">
+        <div class="w-[50%]">
+            <p class="text-[50px] font-palanquin font-bold">Sign Up for <span class="text-slate-600">Updates</span> & Newsletter</p>
+        </div>
+        <div class="w-[50%] flex items-center justify-center">
+
+            <div class="flex items-center justify-center w-[80%] h-16 p-1 border border-slate-900 rounded-full gap-1 ">
+                <input class="h-[90%] w-[60%] hover:border-0 " placeholder="name@adidas.com" type="email" name="" id="" style="input:focus{outline: none; border: none; border-color:#ccc; box-shadow: none;}">
+
+                <div class="h-[90%] w-[30%] flex items-center justify-center rounded-full bg-slate-900 text-white cursor-pointer">
+                    <p class="font-normal font-montserrat">Subscribe</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter section ends Here  -->
+
+    <!-- Footer Starts Here  -->
+    <footer class="w-full h-auto flex flex-col px-14 py-10 mt-28 font-montserrat bg-black text-white">
+        <div class="flex w-full h-auto mb-14 gap-x-14 ">
+
+            <div class="flex flex-col w-[40%] h-auto">
+                <img class="w-28 cursor-pointer" src="../nike-assets/icons/Adidas-White.svg" alt="">
+                <p class="w-[80%] mt-5 ml-2">Get shoes ready for the new term at your nearest Adidas store. Find Your perfect Size In Store. Get Rewards</p>
+                <div class="flex gap-4 mt-5 ml-2 cursor-pointer">
+                    <img class="w-12" src="../nike-assets/icons/twitter-154.svg" alt="">
+                    <img class="w-12" src="../nike-assets/icons/facebooknew.svg" alt="">
+                    <img class="w-12" src="../nike-assets/icons/instagramnew.svg" alt="">
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <p class="text-lg font-medium mt-3">Products</p>
+                <ul class="flex flex-col gap-3 mt-4  text-md ">
+                    <li class="hover:text-gray-700 cursor-pointer">Adidas Air 1</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Adidas Air Lite</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Adidas Light Feather</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Adidas Sneakers</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Adidas Casual Sneakers</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Adidas Floaters</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Adidas Crocs</li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col">
+                <p class="text-lg font-medium mt-3">Help</p>
+                <ul class="flex flex-col gap-3 mt-4  text-md ">
+                    <li class="hover:text-gray-700 cursor-pointer">About us</li>
+                    <li class="hover:text-gray-700 cursor-pointer">FAQs</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Privacy Policy</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Product Policy</li>
+                    <li class="hover:text-gray-700 cursor-pointer">How it Works!</li>
+                    <li class="hover:text-gray-700 cursor-pointer">Payment Policy</li>
+                </ul>
+            </div>
+            <div class="flex flex-col">
+                <p class="text-lg font-medium mt-3">Contact Us</p>
+                <ul class="flex flex-col gap-3 mt-4  text-md ">
+                    <li class="hover:text-gray-700 cursor-pointer">+91 1800 234 265</li>
+                    <li class="hover:text-gray-700 cursor-pointer ">customersupport@adidas.com</li>
+                    
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div class="w-full flex items-center justify-between mt-10 cursor-pointer ">
+            <p class=""><span class="text-xl">&copy;</span> Copyright. All rights reserved.</p>
+            <p class="">Terms & Conditions</p>
+        </div>
+    </footer>
+</body>
+</html>
