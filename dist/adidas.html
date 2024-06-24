@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../nike-assets/icons/adidasico.svg" type="image/x-icon">
 </head>
 <body class="relative w-full h-full bg-white">
+
     <nav class="w-[90%] h-18 flex items-center justify-between mt-3 mx-auto text-gray-950">
         <div>
             <img class="w-[85px] cursor-pointer" src="../nike-assets/icons/addidas.svg" alt="">
@@ -16,10 +17,11 @@
 
             <ul class="flex flex-col sm:mt-0 mt-5 sm:flex-row items-start sm:gap-10 gap-14 text-xl sm:text-lg sm:font-normal font-bold sm:normal-case uppercase font-montserrat text-gray-950 cursor-pointer sm:mx-0 mx-5 ">
 
-                <li class=" hover:text-slate-600 sm:hover:text-gray-950">Home</li>
-                <li class=" hover:text-slate-600 sm:hover:text-gray-950">About Us</li>
-                <li class=" hover:text-slate-600 sm:hover:text-gray-950">Products</li>
-                <li class=" hover:text-slate-600 sm:hover:text-gray-950">Contacts Us</li>
+                <li class=" hover:text-slate-800 sm:hover:text-gray-950"><a href="./404.html">Home</a></li>
+                <li class=" hover:text-slate-800 sm:hover:text-gray-950"><a href="./404.html">About us</a></li>
+                <li class=" hover:text-slate-800 sm:hover:text-gray-950"><a href="./404.html">Products</a></li>
+                <li class=" hover:text-slate-800 sm:hover:text-gray-950"><a href="./404.html">Contact Us</a></li>
+                <li class="sm:hidden block border-t-2 hover:text-slate-800 sm:hover:text-gray-950 py-2"><a class=" h-12 w-14 p-2 px-5 normal-case text-lg text-center bg-slate-950 text-white rounded-full" href="./404.html">Sign in</a></li>
             </ul>
         </div>
         <div class="flex gap-2">
@@ -39,10 +41,10 @@
                 <div class="sm:text-[80px] text-[75px] w-full font-bold font-montserrat text-slate-950">The New Arrival <span class="text-slate-600">Adidas</span> Shoes</div>
                 <p class="text-slate-500 sm:w-[80%] w-full p-1 text-md ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur excepturi numquam debitis magni, expedita provident et odio laboriosam consequuntur quos.</p>
                 
-                <div class="sm:mt-20 mt-10 flex flex-row items-center justify-center  gap-1 sm:w-[30%] w-[50%] h-12 rounded-full bg-slate-900 text-white cursor-pointer"> 
+                <a href="./404.html" onclick="initializeLocalStorage()" class="sm:mt-20 mt-10 flex flex-row items-center justify-center  gap-1 sm:w-[30%] w-[50%] h-12 rounded-full bg-slate-900 text-white cursor-pointer"> 
                     <p class="font-normal font-montserrat">Shop Now</p>
                     <img class="w-8 rounded-none" src="../nike-assets/icons/arrow-up.svg" alt="">
-                </div>
+                </a>
 
                 <div class="flex sm:justify-start justify-center mt-10 sm:px-5  sm:gap-10 sm:gap-x-16  gap-x-10 mb-5">
                     
@@ -118,6 +120,19 @@
                 navLinks.classList.add('left-[-100%]');
             }
         }
+
+        let count = 0
+        function initializeLocalStorage() {
+            if (!sessionStorage.getItem('counter')) {
+                sessionStorage.setItem('counter', count);
+                console.log('Variable initialized with value:', sessionStorage.getItem('counter'));
+            } else {
+                console.log('Variable already exists with value:', sessionStorage.getItem('counter'));
+            }
+        }
+        
+
+        
     </script>
     <!-- Hero Section ends Here  -->
 
@@ -184,9 +199,9 @@
             <p class="text-[50px] font-bold font-palanquin">We Provide You <span class="text-slate-600">Super  Quality</span> Shoes</p>
             <p class="w-[90%] mt-5 text-gray-500 font-montserrat text-md p-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad officia eveniet sunt porro voluptate deleniti alias ex consectetur minima. Repudiandae sequi at sed fugiat quo.</p>
             <p class="mt-5 text-gray-500 font-montserrat text-md p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, est.</p>
-            <div class="sm:mt-20 mt-10 flex flex-row items-center justify-center  gap-4 sm:w-[35%] w-[45%] sm:h-14 h-12 rounded-full bg-slate-900 text-white cursor-pointer"> 
+            <a href="./404.html" onclick="initializeLocalStorage()" class="sm:mt-20 mt-10 flex flex-row items-center justify-center  gap-4 sm:w-[35%] w-[45%] sm:h-14 h-12 rounded-full bg-slate-900 text-white cursor-pointer"> 
                 <p class="font-normal font-montserrat sm:text-xl text-lg">Shop Now</p>
-            </div>
+            </a>
         </div>
         
         <img class="sm:w-[50%] w-full h-auto" src="../nike-assets/images/shoe8.svg" alt="">
@@ -222,19 +237,21 @@
 
         <div class="mt-20 flex flex-col sm:w-[50%] w-full ml-3">
             <p class="text-[50px] font-bold font-palanquin"><span class="text-slate-600">Special</span> offer</p>
-            <p class="w-[90%] text-slate-500 text-xl mt-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem blanditiis fugiat error quo, nisi facere? Atque fugiat consequuntur voluptate cum. </p>
-            <p class="w-[85%] text-slate-500 text-xl mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem blanditiis fugiat error quo, nisi facere? </p>
-            <div class="flex gap-2 sm:justify-start justify-center">
+            <p class="w-[90%] text-slate-500 sm:text-xl text-lg mt-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem blanditiis fugiat error quo, nisi facere? Atque fugiat consequuntur voluptate cum. </p>
+            <p class="w-[85%] text-slate-500 sm:text-xl text-lg mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem blanditiis fugiat error quo, nisi facere? </p>
+           
+            <div class="flex gap-2 sm:justify-start justify-center ">
 
-                <div class="mt-20 flex flex-row items-center justify-center sm:gap-1 gap-x-0 sm:w-[30%] w-[40%] h-12 rounded-full bg-slate-900 text-white cursor-pointer"> 
+                <a href="./404.html" onclick="initializeLocalStorage()" class="mt-20 flex flex-row items-center justify-center sm:gap-1 gap-x-0 sm:w-[30%] w-[40%] h-12 rounded-full bg-slate-900 text-white cursor-pointer"> 
                     <p class="font-normal font-montserrat sm:text-lg text-md">Shop Now</p>
                     <img class="sm:w-8 w-6" src="../nike-assets/icons/arrow-up.svg" alt="">
-                </div>
-                <div class="mt-20 flex flex-row items-center justify-center  gap-4 sm:w-[30%] w-[40%] h-12 rounded-full border border-slate-900 text-slate-900 cursor-pointer"> 
-                    <p class="font-normal font-montserratsm:text-lg text-md">Learn more</p>
-                </div>
+                </a>
+
+                <a href="./404.html" onclick="initializeLocalStorage()" class="mt-20 flex flex-row items-center justify-center  gap-4 sm:w-[30%] w-[40%] h-12 rounded-full border border-slate-900 text-slate-900 cursor-pointer"> 
+                    <p class="font-normal font-montserrat sm:text-lg text-md">Learn more</p>
+                </a>
             </div>
-        </div>
+        </div> 
     </section>
     <!-- Special offer section ends Here  -->
     
@@ -285,9 +302,9 @@
             <div class="flex items-center justify-center sm:w-[80%] w-full  h-16 p-1 border border-slate-900 rounded-full gap-1 ">
                 <input class="h-[90%] w-[60%] hover:border-0 " placeholder="name@adidas.com" type="email" name="" id="" style="input:focus{outline: none; border: none; border-color:#ccc; box-shadow: none;}">
 
-                <div class="h-[90%] w-[30%] flex items-center justify-center rounded-full bg-slate-900 text-white cursor-pointer">
-                    <p class="font-normal font-montserrat">Subscribe</p>
-                </div>
+                <a href="./404.html" onclick="initializeLocalStorage()" class="h-[90%] w-[30%] flex items-center justify-center rounded-full bg-slate-900 text-white cursor-pointer">
+                    <p class="font-normal font-montserrat sm:text-lg text-sm ">Subscribe</p>
+                </a>
 
             </div>
         </div>
@@ -302,16 +319,21 @@
                 <img class="w-28 cursor-pointer" src="../nike-assets/icons/Adidas-White.svg" alt="">
                 <p class="w-[80%] mt-5 ml-2">Get shoes ready for the new term at your nearest Adidas store. Find Your perfect Size In Store. Get Rewards</p>
                 <div class="flex gap-4 mt-5 ml-2 cursor-pointer">
-                    <img class="w-12" src="../nike-assets/icons/twitter-154.svg" alt="">
+                    <a href="http://">
+                        <img class="w-12" src="../nike-assets/icons/twitter-154.svg" alt="">
+                    </a> 
+                    <!-- Similarly rest can be hyperlinked  as above -->
                     <img class="w-12" src="../nike-assets/icons/facebooknew.svg" alt="">
                     <img class="w-12" src="../nike-assets/icons/instagramnew.svg" alt="">
                 </div>
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col sm:ml-0 ml-2">
                 <p class="text-lg font-medium mt-3">Products</p>
                 <ul class="flex flex-col gap-3 mt-4  text-md ">
-                    <li class="hover:text-gray-700 cursor-pointer">Adidas Air 1</li>
+                    
+                    <li class="hover:text-gray-700 cursor-pointer"><a href="http://">Adidas Air 1</a></li>
+                     <!-- Similarly rest can be hyperlinked  as above -->
                     <li class="hover:text-gray-700 cursor-pointer">Adidas Air Lite</li>
                     <li class="hover:text-gray-700 cursor-pointer">Adidas Light Feather</li>
                     <li class="hover:text-gray-700 cursor-pointer">Adidas Sneakers</li>
@@ -321,7 +343,7 @@
                 </ul>
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col sm:ml-0 ml-2">
                 <p class="text-lg font-medium mt-3">Help</p>
                 <ul class="flex flex-col gap-3 mt-4  text-md ">
                     <li class="hover:text-gray-700 cursor-pointer">About us</li>
@@ -332,7 +354,7 @@
                     <li class="hover:text-gray-700 cursor-pointer">Payment Policy</li>
                 </ul>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col sm:ml-0 ml-2">
                 <p class="text-lg font-medium mt-3">Contact Us</p>
                 <ul class="flex flex-col gap-3 mt-4  text-md ">
                     <li class="hover:text-gray-700 cursor-pointer">+91 1800 234 265</li>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body class="relative w-full h-full bg-white">
+
+    <div class="h-full w-full p-5 pt-0 flex flex-col items-center justify-center">
+        <p class="font-montserrat font-normal text-3xl text-center mt-4 mb-2 text">uh oh 404 Not found</p>
+        <img class="sm:w-[500px] w-full gif" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM240NTQ5ZHRiaWFlc3N2OTIxMG91Zmk4bW02d29jMXl1aHFydXMzNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yXVO8p2xdVUpVlPs5z/giphy.webp" alt="Not found">
+
+        <a href="./adidas.html" class="flex items-center justify-center w-36 h-12 rounded-full bg-black gap-x-4 mt-5">
+            <p class="text-white font-montserrat text-lg">Go Back</p>
+            <img class="w-6" src="../nike-assets/icons/return.svg" alt="" srcset="">
+        </a>
+    </div>
+    <script>
+        
+        const array = ['Here you are once Again @.@','Fine!','404 Not found : Enjoy Dragon Dance then :)']
+        const gifphy = ['https://cdn.discordapp.com/attachments/893029035561594910/1254737777518448730/jonah-hill-annoyed-min.gif?ex=667a951e&is=6679439e&hm=4b45dc24b83900bc085195d157adaeecaf8982b2eede9f2b62845c61592b5932&','https://cdn.discordapp.com/attachments/893029035561594910/1254737777145286656/rickroll-roll-min.gif?ex=667a951d&is=6679439d&hm=ee7dcb10d29df1477df039c6d9cf2a605cb863e66270cf11645e943ebf6e933f&','https://cdn.discordapp.com/attachments/893029035561594910/1254739781183864842/toothless-toothless-dragon-min.gif?ex=667a96fb&is=6679457b&hm=b899084103b1439438c215d71d15c0de299ad41fcd3c725abf5ed9e95dcf1b1d&']
+
+        const text = document.getElementsByClassName("text")
+        const gif = document.getElementsByClassName("gif")
+
+        const permText = 'uh oh 404 Not found'
+        const permLink = 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM240NTQ5ZHRiaWFlc3N2OTIxMG91Zmk4bW02d29jMXl1aHFydXMzNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yXVO8p2xdVUpVlPs5z/giphy.webp'
+
+        const getLocalStorage = () =>{
+            console.log(sessionStorage.getItem('counter'))
+            if(sessionStorage.getItem('counter') == 1){
+
+                text[0].textContent = array[0] || permText
+                gif[0].src = gifphy[0] || permLink
+                console.log("Executed 1")
+                console.log(gif[0].src,text[0].textContent)
+                
+            }else if (sessionStorage.getItem('counter') == 2) {
+                text[0].textContent = array[1] || permText
+                gif[0].src = gifphy[1] || permLink
+                console.log("Executed 2")
+                console.log(gif[0].src,text[0].textContent)
+            }else if(sessionStorage.getItem('counter') >= 2){
+                text[0].textContent = array[2] || permText
+                gif[0].src = gifphy[2] || permLink
+
+            }
+
+            let count = sessionStorage.getItem('counter')
+            count++;
+            sessionStorage.setItem("counter",count)
+
+            
+        }
+
+        getLocalStorage()
+    </script>
+</body>
+</html>
