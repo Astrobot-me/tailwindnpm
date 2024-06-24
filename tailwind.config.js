@@ -3,6 +3,7 @@ export default {
   content: [
     "./dist/index.html",
     "./dist/**/*.{html,js,ts,jsx,tsx}",
+    "./index.html"
   ],
   theme: {
     fontSize: {
